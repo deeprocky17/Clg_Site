@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/517cbc4f92.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    
+    
+    <div class="bg" style="width:360px">
+       
+        <div class="gradient">
+        </div>
+        <div class="img-slider" style="width:360px;height:300px">
+            <div class="slide"style="height:300px">
+              <img src="assets/bg/SriptoAdd.png" alt="">
+              <div class="info">
+                
+              </div>
+            </div>
+            <div class="slide">
+              <img src="assets/icons/sripto.png" alt="">
+              <div class="info">
+                
+              </div>
+            </div>
+            
+            <div class="navigation">
+              <div class="btn active"></div>
+              <div class="btn"></div>
+              
+            </div>
+            
+          </div>
+          <div class="img-slider2" style="margin-top:270px">
+            <div class="slide2" >
+                <h2>S R I P T O </h2> 
+                    <h3>"New Solutions for New Beginnings"</h3>
+                    <br>
+               <p>
+                
+Sripto is a team of students who are excelled in different skills. Our main focus is to build technical and non technical projects. We worked on projects like VEC, ChatBots, Website, and many more are being developed.
+And, we do encourgae all catageries of students with different skills that who are interested to work in projects. We believe zero to hero tagline as we started with none and developing without boundaries.
+
+               </p>
+                
+              </div>
+          </div>
+
+         
+  
+         
+          <div class="our-projects" style="color:white">
+            Our Projects
+          </div>
+          
+          
+        
+          <div class="img-slider3" style="height: 440px;"><section id="projects"></section>
+            <div class="slide3" >
+                
+                <div class="VEC">
+                    
+                    <img src="assets/icons/VEC.png" alt="">
+                    
+                </div> 
+                <h2>VEC</h2>
+                <h3>VIT-AP CLUBS & EVENTS</h3>
+                    <br>
+               <p>
+                
+                An institutional-based App which is very useful for the students and faculties of this institution.
+
+               </p>
+               <div class="bttn">
+               <a href="info.html"><button class="btn" style="margin-left:3px;margin-top:140px">Read More</button>
+               </a></div>
+              </div>
+          </div>
+          
+
+          <div class="img-slider3" style="border-radius: 0%;height: 440px;MARGIN-TOP:1200PX;margin-left:0%;width:360px;"><section id="projects"></section>
+            <div class="slide3" >
+                
+                <div class="VEC">
+                    
+                    
+                    
+                </div> 
+                <h2 style="margin-left:10px;text-decoration:underline;">CONTACT US</h2>
+                <br>
+                <p style="margin-left:10px">PHONE: +91-9347705113 <br> VIT-AP UNIVERSITY, <br> Near Vijaywada, <br> Andhra Pradesh, <br> India.</p>
+                    <br>
+               <p>
+                <a href="" style="color:white;height:20px;font-size:20px;"><i class="fa fa-google" aria-hidden="true" style="margin-left:10px;"></i> sripto.teams@gmail.com</a>
+<br>
+<br>
+<hr>
+<p class="moto"> We are looking for talented,</p> 
+<p style="margin-left:15px;font-size:18px"> passionate folks to join our team.</p>
+<hr>
+<br>
+<h2 style="margin-left:10px;">Reach us out...</h2>
+<br>
+
+<a href="https://instagram.com/sripto_?igshid=OTJlNzQ0NWM=" style="color:white"><i class="fa-brands fa-instagram" style="font-size:50px;margin-left:90px" ></a></i><a href=""style="color:white"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:50px;margin-left:30px;"></i></a>          
+</p>
+
+          </div>
+<div class="" style="margin-top:60px;margin-left:75px">
+          SRIPTO<i class="fa-solid fa-copyright"></i>2023.COPYRIGHT <br>
+          ALL RIGHTS RESERVED
+        </div>
+      
+          <script type="text/javascript">
+          var slides = document.querySelectorAll('.slide');
+          var btns = document.querySelectorAll('.btn');
+          let currentSlide = 1;
+      
+          // Javascript for image slider manual navigation
+          var manualNav = function(manual){
+            slides.forEach((slide) => {
+              slide.classList.remove('active');
+      
+              btns.forEach((btn) => {
+                btn.classList.remove('active');
+              });
+            });
+      
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+          }
+      
+          btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+              manualNav(i);
+              currentSlide = i;
+            });
+          });
+      
+          // Javascript for image slider autoplay navigation
+          var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+      
+            var repeater = () => {
+              setTimeout(function(){
+                [...active].forEach((activeSlide) => {
+                  activeSlide.classList.remove('active');
+                });
+      
+              slides[i].classList.add('active');
+              btns[i].classList.add('active');
+              i++;
+      
+              if(slides.length == i){
+                i = 0;
+              }
+              if(i >= slides.length){
+                return;
+              }
+              repeater();
+            }, 2000);
+            }
+            repeater();
+          }
+          repeat();
+          </script>
+          
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="assets/icons/sripto.png" width="200" height="90" class="sripto"></label>
+        <ul>
+        <li><a href="#projects">About Us</a></li>
+        <li><a href="#about-us">Projects</a></li>
+        <li><a href="#contact">Connect With Us</a></li>
+        </ul>
+        </nav>
+        
+        
+            
+              
+            </div>
+            
+    
+    </div>
+    
+</body>
+</html>
